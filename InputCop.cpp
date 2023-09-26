@@ -125,7 +125,6 @@
     }
     int num;
     num = std::stoi(number);
-    std::cout << "the number is: " << num << std::endl;
     return num;
   };
 
