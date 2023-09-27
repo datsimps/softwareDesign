@@ -12,6 +12,7 @@ int rightValue;
 int precVal;
 public: 
   Add_Expr_Node (Expr_Node* &num1, Expr_Node* &num2);
+  ~Add_Expr_Node(void);
   int eval (void) override;
   void accept(class Visitor &visitor);
 };
