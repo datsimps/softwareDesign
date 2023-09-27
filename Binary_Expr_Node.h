@@ -8,7 +8,8 @@ class Binary_Expr_Node : public Expr_Node {
 public: 
   Binary_Expr_Node (void);
   Binary_Expr_Node (Expr_Node* left, Expr_Node* right); 
-  int eval (void);
+  virtual int eval (void) =0;
+  virtual ~Binary_Expr_Node(void);
 
 protected: 
 
