@@ -23,7 +23,10 @@ int Binary_Expr_Node::eval()
   int rightValue = right_->eval();
   return leftValue + rightValue;
 }
+Binary_Expr_Node::~Binary_Expr_Node (void)
+{
 
+}
 /*
 int main(){
 
