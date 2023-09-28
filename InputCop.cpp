@@ -19,13 +19,12 @@
 
   bool InputCop::isNumber(std::string str){
     char ch;
-    for(int i=0; i<str.length(); i++){
+    for(unsigned long i=0; i<str.length(); i++){
       ch = str[i];
     if(ch >= '0' && ch <= '9'){
       continue;
     }else if(str[i] == '-' && (str[i+1] >= '0' && ch <= '9')){
       continue;
-      
     }else if(str[i] == '+' && (str[i+1] >= '0' && ch <= '9')){
       continue;
     }else if(str[i] == ',' && (str[i+1] >= '0' && ch <= '9')){
@@ -113,7 +112,7 @@
   int InputCop::getNumber(std::string str){
     std::string number = "";
     char ch;
-    for(int i=0; i<str.length(); i++){
+    for(unsigned long i=0; i<str.length(); i++){
       ch = str[i];
       if(ch >= '0' && ch <= '9'){
        number += ch;
