@@ -10,11 +10,6 @@ Expr_Tree_Builder::Expr_Tree_Builder (void)
     this->tree_ = NULL;
     delete tree_;
   };
-  
-  void Expr_Tree_Builder::start_expression (void) { 
-    // ... 
-    this->tree_ = new Expr_Tree (); 
-  };
 
   void Expr_Tree_Builder::build_number (int n){
     Expr_Node * n1 = new Number_Node (n);
