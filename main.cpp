@@ -27,7 +27,7 @@
 
 
 int main(){
-    Expr_Tree_Builder marshall;
+    Expr_Tree_Builder marshall = Expr_Tree_Builder();
     Binary_Visitor barney;
     Expr_Node *a =new Number_Node(3);
     Expr_Node *b =new Number_Node(3);
