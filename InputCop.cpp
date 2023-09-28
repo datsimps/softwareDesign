@@ -2,6 +2,9 @@
 #include <sstream>
 
   InputCop::InputCop(void){};
+
+  InputCop::~InputCop(void){};
+
   bool InputCop::isOperator(std::string str){
     if (str == "+"){
     return true;
