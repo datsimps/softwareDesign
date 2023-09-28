@@ -13,8 +13,8 @@ public:
 
 protected: 
 
-  Expr_Node * right_; 
   Expr_Node * left_; 
+  Expr_Node * right_;
   int precVal;
 }; 
 
