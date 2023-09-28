@@ -14,6 +14,11 @@ Expr_Tree::Expr_Tree (void)
 {
 }
 
+Expr_Tree_Builder::~Expr_Tree_Builder (void){
+    this->tree_ = NULL;
+    delete tree_;
+};
+
 void Expr_Tree::insert(Expr_Node* node){
 stack.push(node);
 };
