@@ -7,6 +7,7 @@ Expr_Tree_Builder::Expr_Tree_Builder (void)
   
 }; 
   Expr_Tree_Builder::~Expr_Tree_Builder (void){
+    this->tree_->~Expr_Tree();
     this->tree_ = NULL;
     delete tree_;
   };
