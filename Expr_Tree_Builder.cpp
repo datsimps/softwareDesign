@@ -77,9 +77,13 @@ Expr_Tree_Builder::Expr_Tree_Builder (void)
     delete e2;
     delete expr;
   };
-  Expr_Node * Expr_Tree_Builder::returnPtr(void){
+  void Expr_Tree_Builder::getAnswer(void){
     Expr_Node * e1 = tree_->stack.pop();
-    return e1;
+    int result = e1->eval();
+    std::cout << result << std::endl;
+    std::cout << "Bow before Zuul: " << std::endl;
+    e1 = NULL;
+    delete e1;
   }
 Expr_Tree * Expr_Tree_Builder::get_expression (void) 
 { 
