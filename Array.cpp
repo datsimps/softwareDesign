@@ -93,7 +93,7 @@ const Array <T> & Array <T>::operator = (const Array & rhs)
 
   for (T* iter=this->data_, *iter_end=this->data_ + this->cur_size_, *rhs_iter=rhs.data_; 
       iter != iter_end;
-      ++iter, rhs_iter)
+      ++iter, --rhs_iter)
   {
     *iter = *rhs_iter;
   }
@@ -246,7 +246,7 @@ bool Array <T>::operator == (const Array & rhs) const
     std::cout << "false" << std::endl;
     return false;
   }
-    for (int i = 0; i <cur_size_; i++) {
+    for (size_t i = 0; i <cur_size_; i++) {
       if (data_[i] != rhs.data_[i]){
         std::cout << "false" << std::endl;
         return false;
@@ -267,7 +267,7 @@ bool Array <T>::operator != (const Array & rhs) const
     std::cout << "true" << std::endl;
     return false;
   }
-  for (int i = 0; i <cur_size_; i++) {
+  for (size_t i = 0; i <cur_size_; i++) {
     if (data_[i] == rhs.data_[i]){
       std::cout << "true" << std::endl;
       return false;
