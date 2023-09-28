@@ -6,7 +6,10 @@ Expr_Tree_Builder::Expr_Tree_Builder (void)
 {
   
 }; 
-  //virtual ~Expr_Tree_Builder (void); 
+  Expr_Tree_Builder::~Expr_Tree_Builder (void){
+    this->tree_ = NULL;
+    delete tree_;
+  };
   
   void Expr_Tree_Builder::start_expression (void) { 
     // ... 
