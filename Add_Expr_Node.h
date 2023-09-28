@@ -12,10 +12,10 @@ Expr_Node * right_;
 int precVal;
 
 public: 
-  Binary_Expr_Node (void);
-  Binary_Expr_Node (Expr_Node* left, Expr_Node* right);
-  virtual int eval (void) =0;
-  virtual ~Binary_Expr_Node(void);
+  Add_Expr_Node (Expr_Node* &num1, Expr_Node* &num2);
+  ~Add_Expr_Node(void);
+  int eval (void);
+  void accept(class Visitor &visitor);
 
 };
 #endif  // !defined _ADD_EXPR_NODE_H_
