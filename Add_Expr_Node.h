@@ -7,8 +7,6 @@
 class Add_Expr_Node : public Binary_Expr_Node { 
 Expr_Node * left_;
 Expr_Node * right_;
-int leftValue;
-int rightValue;
 int precVal;
 public: 
   Add_Expr_Node (Expr_Node* &num1, Expr_Node* &num2);
