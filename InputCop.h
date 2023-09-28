@@ -9,6 +9,8 @@ public:
 
   InputCop(void);
 
+  ~InputCop(void);
+
   bool isOperator(std::string string);
 
   bool isNumber(std::string string);
