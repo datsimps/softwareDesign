@@ -2,7 +2,7 @@ cc=g++
 CFLAGS= -g -Wall
 
 final: main.o Add_Expr_Node.o Sub_Expr_Node.o Mult_Expr_Node.o Div_Expr_Node.o Mod_Expr_Node.o Binary_Expr_Node.o Number_Node.o Unary_Expr_Node.o Expr_Tree.o Expr_Tree_Builder.o InputCop.o Binary_Visitor.o Calculator.o
-		$(cc) $(CFLAGS) main.o Add_Expr_Node.o Sub_Expr_Node.o Mult_Expr_Node.o Div_Expr_Node.o Mod_Expr_Node.o Binary_Expr_Node.o Number_Node.o Unary_Expr_Node.o Expr_Tree.o Expr_Tree_Builder.o InputCop.o Binary_Visitor.o Calculator.o -o assignment4
+		$(cc) $(CFLAGS) main.o Add_Expr_Node.o Sub_Expr_Node.o Mult_Expr_Node.o Div_Expr_Node.o Mod_Expr_Node.o Binary_Expr_Node.o Number_Node.o Unary_Expr_Node.o Expr_Tree.o Expr_Tree_Builder.o InputCop.o Binary_Visitor.o Calculator.o -o final
 
 main.o: Add_Expr_Node.o Sub_Expr_Node.o Mult_Expr_Node.o Div_Expr_Node.o Mod_Expr_Node.o Number_Node.o Binary_Expr_Node.o Unary_Expr_Node.o Expr_Tree.o Expr_Tree_Builder.o InputCop.o Binary_Visitor.o Calculator.o
 		$(cc) $(CFLAGS) -c main.cpp
