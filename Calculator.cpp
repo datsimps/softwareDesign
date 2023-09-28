@@ -21,7 +21,6 @@ Calculator::Calculator(Expr_Tree_Builder &builder) : builder(&builder){};
 
 bool Calculator::tree_Expr(const std::string inputExpr, InputCop cop) {
   std::string postfix;
-  builder->start_expression();
   postfix = cop.convert(inputExpr);
   Stack<int> temp = Stack<int>();
   std::stringstream ss(postfix);
@@ -68,7 +67,6 @@ void Calculator::Start() {
         std::cout << " " << std::endl;
         std::cout << "Your answer is: " << std::endl;
         Stack<int> x = Stack<int>();
-        this->builder->start_expression();
         tree_Expr(input, cop);
         Expr_Node *expr2 = this->builder->returnPtr();
         int result = expr2->eval();
