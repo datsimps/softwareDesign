@@ -11,6 +11,10 @@ Add_Expr_Node::Add_Expr_Node(Expr_Node* &left, Expr_Node* &right)
 
 Add_Expr_Node::~Add_Expr_Node (void)
 {
+  this->left_ = NULL;
+  this->right_ = NULL;
+  delete left_;
+  delete right_; 
 }
 
 int Add_Expr_Node::eval()
