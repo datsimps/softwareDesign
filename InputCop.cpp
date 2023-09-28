@@ -109,7 +109,7 @@
     }
   };
 
-  int InputCop::getNumber(std::string str){
+  unsigned long InputCop::getNumber(std::string str){
     std::string number = "";
     char ch;
     for(unsigned long i=0; i<str.length(); i++){
