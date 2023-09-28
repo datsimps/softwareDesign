@@ -48,7 +48,10 @@ bool Calculator::tree_Expr(const std::string inputExpr, InputCop cop) {
   }
   return true;
 };
-
+Calculator::~Calculator(void){
+  this->builder=NULL;
+  delete builder;
+}
 void Calculator::Start() {
   std::string input;
   InputCop cop;
