@@ -4,7 +4,6 @@
 class Expr_Builder { 
 public: 
 
-  virtual void start_expression (void)=0; 
   virtual void build_number (int n) = 0; 
   virtual void build_add_operator (void) = 0; 
   virtual void build_subtract_operator (void) = 0;
