@@ -12,7 +12,7 @@ Stack <T>::Stack (const Stack & stack)
 :Array<T>::Array(Array<T>::cur_size_)
 {
   if(*this != stack){
-    for (int i = 0; i <Array<T>::cur_size_; i++) {
+    for (size_t i = 0; i <Array<T>::cur_size_; i++) {
       Array<T>::data_[i] = stack.Array<T>::data_[i];
     }
   this->data_ = stack.data_;
