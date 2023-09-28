@@ -19,7 +19,7 @@ public:
 
   int signOrder(std::string string);
 
-  int getNumber(std::string string);
+  unsigned long getNumber(std::string string);
 
   std::string convert(std::string);
 
