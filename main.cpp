@@ -33,6 +33,10 @@ int main(){
     Expr_Node *b =new Number_Node(3);
     Add_Expr_Node robin = Add_Expr_Node(a , b);
     barney.visit(robin);
+    a=NULL;
+    b=NULL;
+    delete a;
+    delete b;
 
   
     Calculator ted = Calculator(marshall);
