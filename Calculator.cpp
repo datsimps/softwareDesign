@@ -74,6 +74,8 @@ void Calculator::Start() {
         int result = expr2->eval();
         std::cout << result << std::endl;
         std::cout << "Bow before Zuul: " << std::endl;
+        expr2 = NULL;
+        delete expr2;
       } else {
         std::cout << "Try the equation again: " << std::endl;
       }
