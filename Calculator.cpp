@@ -68,12 +68,7 @@ void Calculator::Start() {
         std::cout << "Your answer is: " << std::endl;
         Stack<int> x = Stack<int>();
         tree_Expr(input, cop);
-        Expr_Node *expr2 = this->builder->returnPtr();
-        int result = expr2->eval();
-        std::cout << result << std::endl;
-        std::cout << "Bow before Zuul: " << std::endl;
-        expr2 = NULL;
-        delete expr2;
+        this->builder->getAnswer();
       } else {
         std::cout << "Try the equation again: " << std::endl;
       }
