@@ -18,7 +18,6 @@ class Expr_Tree_Builder : public Expr_Builder {
 public:
   Expr_Tree_Builder (void); 
   ~Expr_Tree_Builder(void);
-  void start_expression (void);
   void build_number (int n); 
   void build_add_operator (void);
   Expr_Node * returnPtr(void);
