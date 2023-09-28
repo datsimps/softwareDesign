@@ -7,7 +7,7 @@
 class Expr_Tree { 
 public:
   Expr_Tree (void);
-
+  ~Expr_Tree(void);
   void insert(Expr_Node* node);
   void print(Array <Expr_Node *> &exeCommand);
 
