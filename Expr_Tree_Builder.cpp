@@ -2,9 +2,8 @@
 
 
 Expr_Tree_Builder::Expr_Tree_Builder (void)
-:tree_(new Expr_Tree ())
 {
-  
+   this->tree_ = new Expr_Tree();
 }; 
   Expr_Tree_Builder::~Expr_Tree_Builder (void){
     this->tree_->~Expr_Tree();
