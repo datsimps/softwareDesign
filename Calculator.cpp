@@ -23,7 +23,6 @@ bool Calculator::tree_Expr(const std::string inputExpr, InputCop cop) {
   std::string postfix;
   builder->start_expression();
   postfix = cop.convert(inputExpr);
-  int result;
   Stack<int> temp = Stack<int>();
   std::stringstream ss(postfix);
   std::string token;
