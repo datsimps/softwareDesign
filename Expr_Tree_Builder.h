@@ -20,7 +20,7 @@ public:
   ~Expr_Tree_Builder(void);
   void build_number (int n); 
   void build_add_operator (void);
-  Expr_Node * returnPtr(void);
+  void getAnswer(void);
   void build_subtract_operator (void);
   void build_mult_operator (void);
   void build_div_operator (void);
