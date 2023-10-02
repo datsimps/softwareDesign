@@ -13,20 +13,72 @@
 #include "Expr_Tree.h"
 //#include "Visitor.h"
 
-
+  /**
+   * Parent class Expr_Builder
+   * 
+  */
 class Expr_Tree_Builder : public Expr_Builder { 
 public:
+
+  /**
+   * Initializing constructor.
+   *
+  */
   Expr_Tree_Builder (void); 
+
+  /// Destructor.
   ~Expr_Tree_Builder(void);
+
+  /**
+   * build_number, build number node to
+   * add to the tree
+   *
+   * @param[in]      int value    set value to number
+   *
+  */
   void build_number (int n); 
+
+  /**
+   * build_add_operator, add operation node
+   * to add to the tree
+   *
+  */
   void build_add_operator (void);
+
+  /**
+   * getAnswer, output answer
+   *
+  */
   void getAnswer(void);
+
+  /**
+   * build_subtract_operator, add operation node
+   * to add to the tree
+   *
+  */
   void build_subtract_operator (void);
+
+  /**
+   * build_mult_operator, add operation node
+   * to add to the tree
+   *
+  */
   void build_mult_operator (void);
+
+  /**
+   * build_div_operator, add operation node
+   * to add to the tree
+   *
+  */
   void build_div_operator (void);
+
+  /**
+   * build_mod_operator, add operation node
+   * to add to the tree
+   *
+  */
   void build_mod_operator (void);
-  Expr_Tree * get_expression (void);
- // void accept(class Visitor &visitor);
+
 
 protected: 
   Expr_Tree * tree_; 
