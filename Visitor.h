@@ -5,6 +5,12 @@
 
 class Visitor{ 
 public: 
+  /**
+   * visit fuction to add new functionality
+   *
+   * @param[in]      Add_Expr_Node    add node to visit
+   *
+  */
   virtual void visit(class Add_Expr_Node &) = 0;
 };
 
