@@ -3,9 +3,29 @@
 
 class Expr_Node { 
 public: 
-  Expr_Node(void) = default;
+
+  /**
+   * Initializing constructor.
+   *
+  */
+  Expr_Node(void){};
+
+  /// Destructor.
   virtual ~Expr_Node(void){};
+
+  /**
+   * Evaluate, pure virtual to be overwritten
+   * 
+   * @return      int      Answer of evaluate
+  */
   virtual int eval (void) = 0; 
+
+  /**
+   * friend class allows a level of communication
+   * between the two classes that allows for changes
+   * to be made, like adding to a tree
+   *
+  */
   friend class Expr_Tree;
 }; 
 
