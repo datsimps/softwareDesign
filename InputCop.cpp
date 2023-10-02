@@ -1,11 +1,20 @@
 #include "InputCop.h"
 #include <sstream>
 
+//
+// InputCop default constructor
+//
   InputCop::InputCop(void){};
 
-  InputCop::~InputCop(void){};
+//
+// Destructor
+//
+InputCop::~InputCop(void){};
 
-  bool InputCop::isOperator(std::string str){
+//
+// isOperator
+//
+bool InputCop::isOperator(std::string str){
     if (str == "+"){
     return true;
   } else if (str == "-"){
@@ -20,7 +29,10 @@
   return false;
   };
 
-  bool InputCop::isNumber(std::string str){
+//
+// isNumber
+//
+bool InputCop::isNumber(std::string str){
     char ch;
     for(unsigned long i=0; i<str.length(); i++){
       ch = str[i];
@@ -40,7 +52,10 @@
   return true; 
   };
 
-  bool InputCop::hasMatch(std::string string){
+//
+// hasMatch
+//
+bool InputCop::hasMatch(std::string string){
     
   Stack<std::string> temp=Stack<std::string>();
 
@@ -72,7 +87,10 @@
   }
   };
 
-  bool InputCop::validInput(std::string string){
+//
+// validInput
+//
+bool InputCop::validInput(std::string string){
   
   if (hasMatch(string)){
     Stack<std::string> temp=Stack<std::string>();
@@ -96,7 +114,10 @@
   return true;  
   };
 
-  int InputCop::signOrder(std::string ch){
+//
+// signOrder
+//
+int InputCop::signOrder(std::string ch){
     if (ch == "*"){
       return 3;
     }else if (ch == "/"){
@@ -112,7 +133,10 @@
     }
   };
 
-  unsigned long InputCop::getNumber(std::string str){
+//
+// getNumber
+//
+unsigned long InputCop::getNumber(std::string str){
     std::string number = "";
     char ch;
     for(unsigned long i=0; i<str.length(); i++){
@@ -130,7 +154,10 @@
     return num;
   };
 
-  std::string InputCop::convert(std::string string){
+//
+// convert
+//
+std::string InputCop::convert(std::string string){
   Stack<std::string> temp=Stack<std::string>();
   std::string postfix;
 
@@ -159,4 +186,4 @@
         }
   }
   return postfix;
-  };
+};
