@@ -5,20 +5,18 @@
 #include "Expr_Node.h"
 
 class Expr_Tree { 
-protected:
-
+public:
   /**
-   * Protected member variables
-   * left, right, root
+   * Member variables
+   * left, right and root
    * stack of Expr_Node ptrs
    * 
   */
+
   Stack<Expr_Node*> stack;
   Expr_Node* left;
   Expr_Node* right;
   Expr_Node* root;
-
-public:
 
   /**
    * Initializing constructor.
