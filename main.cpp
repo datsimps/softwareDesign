@@ -27,7 +27,14 @@
 
 
 int main(){
-    Expr_Tree_Builder marshall = Expr_Tree_Builder();
+  /**
+   * visit fuction to add new functionality
+   * create a visitor then visit the add_expr_node
+   * output expected is a quote from Benjamin Franklin
+   * to prove it does work
+   *
+  */
+    
     Binary_Visitor barney;
     Expr_Node *a =new Number_Node(3);
     Expr_Node *b =new Number_Node(3);
@@ -38,7 +45,14 @@ int main(){
     delete a;
     delete b;
 
-  
+  /**
+   * create the expr_tree_builder
+   * create the calculator passing in the builder
+   * use the calculators start method to run
+   * 
+   *
+  */
+    Expr_Tree_Builder marshall = Expr_Tree_Builder();
     Calculator ted = Calculator(marshall);
   
     ted.Start();
