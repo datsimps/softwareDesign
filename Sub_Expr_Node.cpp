@@ -3,19 +3,29 @@
 
 #include <iostream>
 
+//
+// Sub_Expr_Node default constructor
+//
 Sub_Expr_Node::Sub_Expr_Node(Expr_Node* &left, Expr_Node* &right)
 :Binary_Expr_Node (left, right)
 ,left_(left)
 ,right_(right)
-,precVal(1)
 { 
 }
+
+//
+// Destructor
+//
 Sub_Expr_Node::~Sub_Expr_Node (void){
   this->left_ = NULL;
   this->right_= NULL;
   delete this->left_;
   delete this->right_;
 }
+
+//
+// Evaluate
+//
 int Sub_Expr_Node::eval()
 { 
   int leftValue = left_->eval();
