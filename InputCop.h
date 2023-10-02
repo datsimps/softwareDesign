@@ -55,6 +55,7 @@ public:
    *
    * @return         bool      for check conditions
    *
+   */
   bool validInput(std::string string);
 
   /**
