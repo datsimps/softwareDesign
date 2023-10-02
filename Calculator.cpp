@@ -17,8 +17,21 @@
 #include "Expr_Node.h"
 #include "Expr_Tree.h"
 
+//
+// Calculator default constructor
+//
 Calculator::Calculator(Expr_Tree_Builder &builder) : builder(&builder){};
 
+//
+// Destructor.
+//
+Calculator::~Calculator(void){
+  this->builder=NULL;
+}
+
+//
+// Tree_Expr
+//
 bool Calculator::tree_Expr(const std::string inputExpr, InputCop cop) {
   std::string postfix;
   postfix = cop.convert(inputExpr);
@@ -47,9 +60,10 @@ bool Calculator::tree_Expr(const std::string inputExpr, InputCop cop) {
   }
   return true;
 };
-Calculator::~Calculator(void){
-  this->builder=NULL;
-}
+
+//
+// Start
+//
 void Calculator::Start() {
   std::string input;
   InputCop cop;
