@@ -1,14 +1,19 @@
 #include "Add_Expr_Node.h"
 #include <iostream>
 
+//
+// Add_Expr_Node constructor
+//
 Add_Expr_Node::Add_Expr_Node(Expr_Node* &left, Expr_Node* &right)
 :Binary_Expr_Node (left, right)
 ,left_(left)
 ,right_(right)
-,precVal(1)
 { 
 }
 
+//
+// Destructor
+//
 Add_Expr_Node::~Add_Expr_Node (void)
 {
   this->left_ = NULL;
@@ -17,6 +22,9 @@ Add_Expr_Node::~Add_Expr_Node (void)
   delete right_; 
 }
 
+//
+// Evaluate
+//
 int Add_Expr_Node::eval()
 { 
   int leftValue = left_->eval();
@@ -24,6 +32,9 @@ int Add_Expr_Node::eval()
   return leftValue + rightValue;
 }
 
+//
+// Accept visitor
+//
 void Add_Expr_Node::accept(class Visitor &visitor)
 {
   visitor.visit(*this);
