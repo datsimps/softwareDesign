@@ -10,9 +10,6 @@
 //
 Expr_Tree::Expr_Tree (void)
 :stack (Stack<Expr_Node*>())
-,left(NULL)
-,right(NULL)
-,root(NULL)
 {
 }
 
@@ -20,12 +17,7 @@ Expr_Tree::Expr_Tree (void)
 // Destructor
 //
 Expr_Tree::~Expr_Tree (void){
-  this->left = NULL;
-  this->right = NULL;
-  this->root = NULL;
-  delete left;
-  delete right;
-  delete root;
+
 }
 
 //
