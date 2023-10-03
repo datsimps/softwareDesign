@@ -23,3 +23,6 @@ Another thing to note on the expression node, it has a pure virtual function cal
 
 ## The Visitor
 	Skipping to the highlight reel of the visitor, we are going to visit the addition expression node. Let’s say we forgot to add a very specific functionality to the node. Instead of us updating the whole program, we can add the visitor abstract class, the concrete visitor and update the visited class (the addition expression node). This visitor class takes visit a particular class, where you can pass the class type as a parameter in the visit. In this case, we visit an addition node, so we pass the addition node as a parameter. If we passed a subtraction node, it would not accept and would do nothing. The addition node has an accept function that calls the visitor to visit this class, in visiting we add the functionality we needed to add. 
+
+
+SideNote: I did not create these design principles. I accept I do not know everything. If I have made an error, inform me so I can learn. Thank you, I wish you the best.
