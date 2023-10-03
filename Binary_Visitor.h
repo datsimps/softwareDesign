@@ -26,7 +26,7 @@ public:
    * @param[in]      Add_Expr_Node    add node to visit
    *
    */
-  virtual void visit (Add_Expr_Node &b);
+  virtual void visit (Add_Expr_Node *b);
 };
 
 #endif  // !defined _BINARY_VISITOR_H_
