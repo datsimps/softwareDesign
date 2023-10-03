@@ -11,7 +11,7 @@ public:
    * @param[in]      Add_Expr_Node    add node to visit
    *
   */
-  virtual void visit(class Add_Expr_Node &) = 0;
+  virtual void visit(class Add_Expr_Node *b) = 0;
 };
 
 #endif  // !defined _VISITOR_H_
