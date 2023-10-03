@@ -37,5 +37,5 @@ int Add_Expr_Node::eval()
 //
 void Add_Expr_Node::accept(class Visitor *visitor)
 {
-  visitor.visit(this);
+  visitor->visit(this);
 }
