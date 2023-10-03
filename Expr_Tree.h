@@ -7,16 +7,13 @@
 class Expr_Tree { 
 public:
   /**
-   * Member variables
-   * left, right and root
+   * Member variable
    * stack of Expr_Node ptrs
    * 
   */
 
   Stack<Expr_Node*> stack;
-  Expr_Node* left;
-  Expr_Node* right;
-  Expr_Node* root;
+
 
   /**
    * Initializing constructor.
