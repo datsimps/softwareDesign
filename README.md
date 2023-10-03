@@ -5,11 +5,14 @@ This is a calculator project that makes use of two software design principles, t
 This project does rely heavily on inheritance and compartmentalizing each section of the program. If one thing fails, it should not be at the detriment of the other classes/sections. I also use a class called “Input Cop” to check the user input. Given the nature of the user input, the more safeguards the better. The different functions can be found in the header file but One thing to note is that the conversion function is found in this area instead of the calculator class (the calculator class encompasses most of the bigger functions). The idea behind this is to limit the back and forth between these two classes. The input cop is used to validate the input and perform operations on the input before passing it on. The calculator shouldn’t do more than is necessary for it to perform its job.
 
 ## The Sections
+
 ### Expression Nodes and the Expression Tree
+
 The expression node is an abstract class, this will make sense in a minute. The expression tree is a friend class to the expression node class, this allows the communication necessary to make changes to the tree. The tree is a stack of expression node pointers. This means if I have child expression nodes, I can address all of them by their parent class. So, let’s review this before moving on; everything else will fall into place. We have a stack structure of expression nodes. That is the nature of the relationship between these two. 
 Another thing to note on the expression node, it has a pure virtual function called eval. Pure virtual means it needs to be overwritten in all children classes of expression node. Since all children need a function to evaluate, we can make it necessary from the parent class for them to write one. 
 
 ### Binary Expression Nodes and Unary Expression Nodes
+
 	Our first example on inheritance in the project. Both nodes inherited from the base Expression Node. The names of these nodes imply the number of operations needed for the evaluate function. The unary still has an evaluate function but if we have a number like 3; we would just return that number. Whereas, if we have an addition node there is another step needed to return a number.
 
 ### Binary Expression Children
