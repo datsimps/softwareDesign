@@ -35,8 +35,7 @@ int Add_Expr_Node::eval()
 //
 // Accept visitor
 //
-void Add_Expr_Node::accept(class Visitor &visitor)
+void Add_Expr_Node::accept(class Visitor *visitor)
 {
-  visitor.visit(*this);
-  std::cout << "this worked" << std::endl;
+  visitor.visit(this);
 }
