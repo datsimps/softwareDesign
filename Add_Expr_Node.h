@@ -46,7 +46,7 @@ public:
    * that was not originally planned for.
    *
   */
-  void accept(class Visitor &visitor);
+  void accept(class Visitor *visitor);
 
 };
 
